@@ -1,1 +1,137 @@
-l
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.left-sidebar {
+    float: left;
+    width: 25%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    float: right;
+    width: 70%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    clear: both;
+}
+``` ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWR Minecraft Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">CWR Minecraft Network</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Vote</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+                <div class="user-info">
+                    <p>125 PLAYERS ONLINE</p>
+                    <p>MC.CWRESPORTS.LK</p>
+                    <a href="#" class="login">Log In</a>
+                    <a href="#" class="register">Register</a>
+                    <a href="#" class="store-button">STORE</a>
+                    <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-sidebar">
+                <h3>Home</h3>
+                <ul>
+                    <li><a href="#">Survival</a></li>
+                    <li><a href="#">Skyblock</a></li>
+                    <li><a href="#">Slimefun</a></li>
+                    <li><a href="#">Lifesteal</a></li>
+                    <li><a href="#">Bedwars</a></li>
+                    <li><a href="#">Duels</a></li>
+                    <li><a href="#">Kit pvp</a></li>
+                    <li><a href="#">Support us</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h1>Welcome to the CWR Minecraft Store!</h1>
+                <p>Your support is very valuable to us for maintaining and improving the server. Our store offers ranks, crate keys, coins (in-game money), and various commands.</p>
+                <h2>Featured Package</h2>
+                <p>MVP Rank - €14.99</p>
+                <h2>Payment Methods</h2>
+                <ul>
+                    <li>PayPal</li>
+                    <li>VISA</li>
+                    <li>SOFORT</li>
+                    <li>paysafecard</li>
+                    <li>SEPA</li>
+                    <li>Eps</li>
+                    <li>Trustly</li>
+                    <li>Belfius</li>
+                    <li>opay</li>
+                    <li>TWINT</li>
+                </ul>
+                <h2>Disclaimer</h2>
+                <p>CWR Minecraft Network is in no way affiliated with Mojang, AB. For questions or issues, please contact us on Discord or via email.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CWR Minecraft Network. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
