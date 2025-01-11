@@ -1,1 +1,72 @@
-Comming Soon...
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Minecraft</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Toko Minecraft</h1>
+        <p>Belilah rank atau coin untuk server Minecraft kamu!</p>
+    </header>
+
+    <section class="shop">
+        <div class="item">
+            <h2>VIP Rank</h2>
+            <p>Harga: Rp 50.000</p>
+            <button onclick="buyItem('vip')">Beli VIP Rank</button>
+        </div>
+        <div class="item">
+            <h2>1000 Coin</h2>
+            <p>Harga: Rp 25.000</p>
+            <button onclick="buyItem('coins')">Beli 1000 Coin</button>
+        </div>
+        <div class="item">
+            <h2>5000 Coin</h2>
+            <p>Harga: Rp 100.000</p>
+            <button onclick="buyItem('5000_coins')">Beli 5000 Coin</button>
+        </div>
+    </section>
+
+    <!-- Modal untuk memilih metode pembayaran -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Pilih Metode Pembayaran</h2>
+            <form id="paymentForm" action="process_payment.php" method="POST">
+                <label for="paymentMethod">Pilih Metode Pembayaran:</label><br>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="gopay">GoPay</option>
+                    <option value="dana">DANA</option>
+                    <option value="bank_transfer">Bank Transfer</option>
+                </select><br><br>
+                <input type="hidden" id="itemSelected" name="itemSelected" value="">
+                <input type="submit" value="Bayar">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function buyItem(item) {
+            // Menyimpan item yang dipilih dalam hidden field
+            document.getElementById("itemSelected").value = item;
+
+            // Menampilkan modal pembayaran
+            document.getElementById("paymentModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("paymentModal").style.display = "none";
+        }
+
+        // Menutup modal jika pengguna mengklik di luar modal
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("paymentModal")) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
